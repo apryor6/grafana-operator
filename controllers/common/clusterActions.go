@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/apryor6/grafana-operator/controllers/constants"
+	"github.com/integr8ly/grafana-operator/controllers/constants"
 	"github.com/go-logr/logr"
 	logf "sigs.k8s.io/controller-runtime/pkg/log"
 

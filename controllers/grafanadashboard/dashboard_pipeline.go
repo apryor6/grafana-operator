@@ -14,8 +14,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/apryor6/grafana-operator/api/integreatly/v1alpha1"
-	"github.com/apryor6/grafana-operator/controllers/config"
+	"github.com/integr8ly/grafana-operator/api/integreatly/v1alpha1"
+	"github.com/integr8ly/grafana-operator/controllers/config"
 	"github.com/go-logr/logr"
 	"github.com/google/go-jsonnet"
 	corev1 "k8s.io/api/core/v1"

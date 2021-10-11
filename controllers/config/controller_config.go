@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/apryor6/grafana-operator/api/integreatly/v1alpha1"
+	"github.com/integr8ly/grafana-operator/api/integreatly/v1alpha1"
 )
 
 const (
