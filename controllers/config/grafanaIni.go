@@ -263,7 +263,7 @@ func (i *GrafanaIni) parseConfig(config map[string][]string) map[string][]string
 	}
 
 	if i.cfg.UnifiedAlerting != nil {
-		config = i.UnifiedAlerting(config)
+		config = i.cfgUnifiedAlerting(config)
 	}
 
 	if i.cfg.Panels != nil {
@@ -646,7 +646,7 @@ func (i *GrafanaIni) cfgAlerting(config map[string][]string) map[string][]string
 func (i *GrafanaIni) cfgUnifiedAlerting(config map[string][]string) map[string][]string {
 	var items []string
 	items = appendBool(items, "enabled", i.cfg.UnifiedAlerting.Enabled)
-	config["alerting"] = items
+	config["unified_alerting"] = items
 
 	return config
 }
