@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/integr8ly/grafana-operator/api/integreatly/v1alpha1"
+	"github.com/apryor6/grafana-operator/api/integreatly/v1alpha1"
 )
 
 type GrafanaIni struct {
@@ -260,6 +260,10 @@ func (i *GrafanaIni) parseConfig(config map[string][]string) map[string][]string
 
 	if i.cfg.Alerting != nil {
 		config = i.cfgAlerting(config)
+	}
+
+	if i.cfg.UnifiedAlerting != nil {
+		config = i.UnifiedAlerting(config)
 	}
 
 	if i.cfg.Panels != nil {
@@ -634,6 +638,14 @@ func (i *GrafanaIni) cfgAlerting(config map[string][]string) map[string][]string
 	items = appendInt(items, "evaluation_timeout_seconds", i.cfg.Alerting.EvaluationTimeoutSeconds)
 	items = appendInt(items, "notification_timeout_seconds", i.cfg.Alerting.NotificationTimeoutSeconds)
 	items = appendInt(items, "max_attempts", i.cfg.Alerting.MaxAttempts)
+	config["alerting"] = items
+
+	return config
+}
+
+func (i *GrafanaIni) cfgUnifiedAlerting(config map[string][]string) map[string][]string {
+	var items []string
+	items = appendBool(items, "enabled", i.cfg.UnifiedAlerting.Enabled)
 	config["alerting"] = items
 
 	return config

@@ -1,4 +1,4 @@
-module github.com/integr8ly/grafana-operator
+module github.com/apryor6/grafana-operator
 
 go 1.16
 
@@ -11,6 +11,7 @@ require (
 	github.com/operator-framework/operator-lib v0.4.1
 	github.com/pkg/errors v0.9.1
 	github.com/stretchr/testify v1.7.0
+	golang.org/x/mod v0.5.1 // indirect
 	k8s.io/api v0.20.2
 	k8s.io/apimachinery v0.20.2
 	k8s.io/client-go v0.20.2
