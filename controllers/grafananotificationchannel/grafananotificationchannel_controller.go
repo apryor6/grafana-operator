@@ -24,8 +24,8 @@ import (
 	"fmt"
 
 	"github.com/go-logr/logr"
-	grafanav1alpha1 "github.com/integr8ly/grafana-operator/api/integreatly/v1alpha1"
-	"github.com/integr8ly/grafana-operator/controllers/constants"
+	grafanav1alpha1 "github.com/apryor6/grafana-operator/api/integreatly/v1alpha1"
+	"github.com/apryor6/grafana-operator/controllers/constants"
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/log"
 
@@ -33,8 +33,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/integr8ly/grafana-operator/controllers/common"
-	"github.com/integr8ly/grafana-operator/controllers/config"
+	"github.com/apryor6/grafana-operator/controllers/common"
+	"github.com/apryor6/grafana-operator/controllers/config"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/client-go/tools/record"

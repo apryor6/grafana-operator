@@ -177,6 +177,7 @@ type GrafanaConfig struct {
 	ExternalImageStorageGcs       *GrafanaConfigExternalImageStorageGcs       `json:"external_image_storage.gcs,omitempty" ini:"external_image_storage.gcs,omitempty"`
 	ExternalImageStorageAzureBlob *GrafanaConfigExternalImageStorageAzureBlob `json:"external_image_storage.azure_blob,omitempty" ini:"external_image_storage.azure_blob,omitempty"`
 	Alerting                      *GrafanaConfigAlerting                      `json:"alerting,omitempty" ini:"alerting,omitempty"`
+	UnifiedAlerting               *GrafanaConfigUnifiedAlerting               `json:"unified_alerting,omitempty" ini:"unified_alerting,omitempty"`
 	Panels                        *GrafanaConfigPanels                        `json:"panels,omitempty" ini:"panels,omitempty"`
 	Plugins                       *GrafanaConfigPlugins                       `json:"plugins,omitempty" ini:"plugins,omitempty"`
 	Rendering                     *GrafanaConfigRendering                     `json:"rendering,omitempty" ini:"rendering,omitempty"`
@@ -597,6 +598,11 @@ type GrafanaConfigAlerting struct {
 	NotificationTimeoutSeconds *int `json:"notification_timeout_seconds,omitempty" ini:"notification_timeout_seconds,omitempty"`
 	// +nullable
 	MaxAttempts *int `json:"max_attempts,omitempty" ini:"max_attempts,omitempty"`
+}
+
+type GrafanaConfigUnifiedAlerting struct {
+	// +nullable
+	Enabled *bool `json:"enabled,omitempty" ini:"enabled"`
 }
 
 type GrafanaConfigPanels struct {

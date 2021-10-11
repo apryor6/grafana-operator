@@ -69,6 +69,12 @@ spec:
                         nullable: true
                         type: integer
                     type: object
+                  unified_alerting:
+                    properties:
+                      enabled:
+                        nullable: true
+                        type: boolean
+                    type: object
                   analytics:
                     properties:
                       check_for_updates:
